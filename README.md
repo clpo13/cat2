@@ -16,6 +16,16 @@ cmake ..
 make
 ```
 
+## Running
+
+```text
+Usage: cat2 file1 file2 ...
+Prints the contents of one or more files to stdout.
+
+  --help     prints a brief help message
+  --version  outputs the program version number and license information
+```
+
 ## License
 
 This program is released under the terms of the [GNU GPL version 3](LICENSE)
