@@ -51,7 +51,9 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# CLion and build folders
+# IDE and build folders
 .idea/
+.vs/
+.vscode/
 cmake-build-debug/
 build/
