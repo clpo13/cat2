@@ -17,19 +17,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "config.h"
 
 int main(int argc, char **argv) {
-    // Print help or version info and then quit
+    // TODO: if no arguments are specified, read from stdin
     if (argc > 1) {
+        // Print help or version info and then quit
         if (strcmp(argv[1], "--version") == 0 ||
               strcmp(argv[1], "-v") == 0) {
-            printf("cat2 1.0.1 - Copyright (C) 2018 Cody Logan\n");
-            printf("This is free software, and you are welcome to ");
-            printf("modify or redistribute it under\n");
-            printf("the terms of the GNU GPL Version 3 or later ");
-            printf("<http://gnu.org/licenses/gpl.html>.\n");
-            printf("This program comes with ABSOLUTELY NO WARRANTY to the ");
-            printf("extent permitted by law.\n");
+            printf("cat2 v%s - Copyright (C) %s %s\n", PROJECT_VERSION, COPY_YEARS, AUTHORS);
+            printf("This is free software, and you are welcome to modify or redistribute it under\n");
+            printf("the terms of the GNU GPL Version 3 or later <http://gnu.org/licenses/gpl.html>.\n");
+            printf("This program comes with ABSOLUTELY NO WARRANTY to the extent permitted by law.\n");
             exit(0);
         }
         if (strcmp(argv[1], "--help") == 0 ||
@@ -48,7 +47,7 @@ int main(int argc, char **argv) {
 
         // If the pointer is null, the file couldn't be opened
         if (fp == NULL) {
-            printf("cannot open file\n");
+            printf("cat2: %s: cannot open file\n", argv[i]);
             exit(1);
         }
 
