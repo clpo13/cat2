@@ -28,6 +28,8 @@ Prints the contents of one or more files to stdout.
 
 ## License
 
+Copyright (c) 2018-2019 Cody Logan
+
 This program is released under the terms of the [GNU GPL version 3](LICENSE)
 or any later version. You may modify it or redistribute it freely according
 to the conditions of the license.

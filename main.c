@@ -1,5 +1,6 @@
 // cat2 - prints the contents of given files to stdout
-// Copyright (C) 2018 Cody Logan
+// Copyright (C) 2018-2019 Cody Logan
+// SPDX-License-Identifier: GPL-3.0-or-later
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -25,7 +26,7 @@ int main(int argc, char **argv) {
     if (argc > 1) {
         if (strcmp(argv[1], "--version") == 0 ||
               strcmp(argv[1], "-v") == 0) {
-            printf("%s - Copyright (C) 2018 Cody Logan\n", PACKAGE_STRING);
+            printf("%s - Copyright (C) 2018-2019 Cody Logan\n", PACKAGE_STRING);
             printf("This is free software, and you are welcome to ");
             printf("modify or redistribute it under\n");
             printf("the terms of the GNU GPL Version 3 or later ");
