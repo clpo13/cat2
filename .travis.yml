@@ -5,4 +5,4 @@ os:
 compiler:
   - gcc
   - clang
-script: mkdir build && cd build && cmake .. && make
+script: autoreconf -iv && ./configure && make
