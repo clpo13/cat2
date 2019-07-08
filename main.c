@@ -18,12 +18,14 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "config.h"
+
 int main(int argc, char **argv) {
     // Print help or version info and then quit
     if (argc > 1) {
         if (strcmp(argv[1], "--version") == 0 ||
               strcmp(argv[1], "-v") == 0) {
-            printf("cat2 1.0.1 - Copyright (C) 2018 Cody Logan\n");
+            printf("%s - Copyright (C) 2018 Cody Logan\n", PACKAGE_STRING);
             printf("This is free software, and you are welcome to ");
             printf("modify or redistribute it under\n");
             printf("the terms of the GNU GPL Version 3 or later ");

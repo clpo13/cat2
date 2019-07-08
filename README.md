@@ -7,12 +7,12 @@ it will print their contents to stdout.
 
 ## Building
 
-Building from source requires CMake 3.5 or greater. In the top-level source
+Building from source requires GNU Autotools. In the top-level source
 directory, run the following:
 
 ```bash
-mkdir build && cd build
-cmake ..
+autoreconf -iv
+./configure
 make
 ```
 
