@@ -37,7 +37,7 @@ int main(int argc, char **argv) {
         }
         if (strcmp(argv[1], "--help") == 0 ||
               strcmp(argv[1], "-h") == 0) {
-            printf("Usage: cat2 file1 file2 ...\n");
+            printf("Usage: %s file1 file2 ...\n", PACKAGE_NAME);
             printf("Prints the contents of one or more files to stdout.\n\n");
             printf("  -h, --help     print this message and quit\n");
             printf("  -v, --version  print version number and quit\n");
