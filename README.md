@@ -11,7 +11,7 @@ Building from source requires GNU Autotools. In the top-level source
 directory, run the following:
 
 ```bash
-autoreconf -iv
+./autogen.sh
 ./configure
 make
 ```
