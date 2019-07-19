@@ -1,8 +1,7 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+#define PROJECT_NAME "@PROJECT_NAME@"
 #define PROJECT_VERSION "@PROJECT_VERSION@"
-#define AUTHORS "@AUTHORS@"
-#define COPY_YEARS "@COPY_YEARS@"
 
 #endif

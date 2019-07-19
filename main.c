@@ -1,18 +1,19 @@
 // cat2 - prints the contents of given files to stdout
-// Copyright (C) 2018 Cody Logan
+// SPDX-License-Identifier: Apache-2.0
 // 
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-// 
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-// 
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+// Copyright 2018-2019 Cody Logan
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,10 +26,7 @@ int main(int argc, char **argv) {
         // Print help or version info and then quit
         if (strcmp(argv[1], "--version") == 0 ||
               strcmp(argv[1], "-v") == 0) {
-            printf("cat2 v%s - Copyright (C) %s %s\n", PROJECT_VERSION, COPY_YEARS, AUTHORS);
-            printf("This is free software, and you are welcome to modify or redistribute it under\n");
-            printf("the terms of the GNU GPL Version 3 or later <http://gnu.org/licenses/gpl.html>.\n");
-            printf("This program comes with ABSOLUTELY NO WARRANTY to the extent permitted by law.\n");
+            printf("%s v%s\n", PROJECT_NAME, PROJECT_VERSION);
             exit(0);
         }
         if (strcmp(argv[1], "--help") == 0 ||

@@ -7,8 +7,8 @@ it will print their contents to stdout.
 
 ## Building
 
-Building from source requires CMake 3.5 or greater. In the top-level source
-directory, run the following:
+Building from source requires a C compiler and CMake 3.5 or greater. In the
+top-level source directory, run the following:
 
 ```bash
 mkdir build && cd build
@@ -26,8 +26,15 @@ Prints the contents of one or more files to stdout.
   -v, --version  output the program version number and license information
 ```
 
+## TODO
+
+- [ ] print from stdin if no files specified
+- [ ] integration and/or unit tests
+
 ## License
 
-This program is released under the terms of the [GNU GPL version 3](LICENSE)
-or any later version. You may modify it or redistribute it freely according
-to the conditions of the license.
+Copyright 2018-2019 Cody Logan.
+
+This program is released under the terms of the
+[Apache License, version 2.0](LICENSE). You may modify it or redistribute it
+freely according to the conditions of the license.
