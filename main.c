@@ -1,6 +1,6 @@
 // cat2 - prints the contents of given files to stdout
 // SPDX-License-Identifier: Apache-2.0
-// 
+//
 // Copyright 2018-2019 Cody Logan
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,13 +24,11 @@ int main(int argc, char **argv) {
     // TODO: if no arguments are specified, read from stdin
     if (argc > 1) {
         // Print help or version info and then quit
-        if (strcmp(argv[1], "--version") == 0 ||
-              strcmp(argv[1], "-v") == 0) {
+        if (strcmp(argv[1], "--version") == 0 || strcmp(argv[1], "-v") == 0) {
             printf("%s v%s\n", PROJECT_NAME, PROJECT_VERSION);
             exit(0);
         }
-        if (strcmp(argv[1], "--help") == 0 ||
-              strcmp(argv[1], "-h") == 0) {
+        if (strcmp(argv[1], "--help") == 0 || strcmp(argv[1], "-h") == 0) {
             printf("Usage: cat2 file1 file2 ...\n");
             printf("Prints the contents of one or more files to stdout.\n\n");
             printf("  -h, --help     print this message and quit\n");

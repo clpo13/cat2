@@ -5,4 +5,12 @@ os:
 compiler:
   - gcc
   - clang
-script: mkdir build && cd build && cmake .. && make
+matrix:
+  exclude:
+    - os: osx
+      compiler: gcc
+script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make && make test
