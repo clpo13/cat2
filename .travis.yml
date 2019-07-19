@@ -9,6 +9,10 @@ matrix:
   exclude:
     - os: osx
       compiler: gcc
+  include:
+    - os: osx
+      osx_image: xcode11
+      compiler: gcc-9
 script:
   - mkdir build
   - cd build
