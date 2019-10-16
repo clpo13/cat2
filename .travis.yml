@@ -4,15 +4,13 @@ arch:
   - arm64
 os:
   - linux
-  - osx
 compiler:
   - gcc
   - clang
 matrix:
-  exclude:
-    - os: osx
-      compiler: gcc
   include:
+    - os: osx
+      compiler: clang
     - os: osx
       osx_image: xcode11
       compiler: gcc-9
