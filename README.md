@@ -37,8 +37,9 @@ Prints the contents of one or more files to stdout.
 
 ## TODO
 
-- [ ] print from stdin if no files specified
+- [X] print from stdin if no files specified
 - [ ] integration and/or unit tests
+- [ ] formatting options (line numbers, compressed whitespace, etc.)
 
 ## License
 

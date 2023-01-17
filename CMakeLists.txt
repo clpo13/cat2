@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 project(cat2
-        VERSION 1.0.2
+        VERSION 1.1.0
         DESCRIPTION "print to stdout"
         LANGUAGES C)
 
@@ -12,6 +12,6 @@ configure_file(${CMAKE_SOURCE_DIR}/config.h.in ${CMAKE_CURRENT_BINARY_DIR}/confi
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(cat2 cat2.c)
-add_test(test_cat2 cat2)
+add_test(test_cat2 cat2 -v)
 
 install(TARGETS cat2 DESTINATION bin)
