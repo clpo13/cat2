@@ -1,7 +1,7 @@
 // cat2 - prints the contents of given files to stdout
 // SPDX-License-Identifier: Apache-2.0
 //
-// Copyright 2018-2019 Cody Logan
+// Copyright 2018-2019,2023 Cody Logan
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,10 +20,33 @@
 #include <string.h>
 #include "config.h"
 
-int main(int argc, char **argv) {
+#define CHUNK_SIZE 1024
+
+void read_file(char* filename) {
+    // Open the file
+    FILE* fp = fopen(filename, "r");
+
+    // If the pointer is null, the file couldn't be opened.
+    if (fp == NULL) {
+        printf("cat2: %s: cannot open file\n", filename);
+        exit(1);
+    }
+
+    // Print the contents of the file line-by-line.
+    // Returns a null pointer when an error or EOF is encountered.
+    char line[CHUNK_SIZE];
+    while (fgets(line, CHUNK_SIZE, fp) != NULL) {
+        printf("%s", line);
+    }
+
+    // Close the file.
+    fclose(fp);
+}
+
+int main(int argc, char* argv[]) {
     // TODO: if no arguments are specified, read from stdin
     if (argc > 1) {
-        // Print help or version info and then quit
+        // Print help or version info and then quit.
         if (strcmp(argv[1], "--version") == 0 || strcmp(argv[1], "-v") == 0) {
             printf("%s v%s\n", PROJECT_NAME, PROJECT_VERSION);
             exit(0);
@@ -36,26 +59,10 @@ int main(int argc, char **argv) {
             exit(0);
         }
     }
-    // Read each file specified on the command line
+
+    // Read each file specified on the command line.
     for (int i = 1; i < argc; i++) {
-        // Open the file
-        FILE *fp = fopen(argv[i], "r");
-
-        // If the pointer is null, the file couldn't be opened
-        if (fp == NULL) {
-            printf("cat2: %s: cannot open file\n", argv[i]);
-            exit(1);
-        }
-
-        // Print the contents of the file line-by-line
-        // Returns a null pointer when an error or EOF is encountered
-        char line[80];
-        while (fgets(line, 80, fp) != NULL) {
-            printf("%s", line);
-        }
-
-        // Close the file
-        fclose(fp);
+        read_file(argv[i]);
     }
 
     return 0;

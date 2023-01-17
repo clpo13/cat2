@@ -16,6 +16,15 @@ cmake ..
 make
 ```
 
+Alternatively:
+
+```bash
+cmake -B build
+cmake --build build
+```
+
+The resulting binary will be found at `build/cat2`.
+
 ## Running
 
 ```text
@@ -33,7 +42,7 @@ Prints the contents of one or more files to stdout.
 
 ## License
 
-Copyright 2018-2019 Cody Logan.
+Copyright 2018-2019,2023 Cody Logan.
 
 This program is released under the terms of the
 [Apache License, version 2.0](LICENSE). You may modify it or redistribute it
